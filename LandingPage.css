@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body
+{
+    background: #333;
+    overflow-x: hidden;
+    font-family: 'Aboreto', cursive;
+}
+header {
+    grid-area: header;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    width: 100%;
+    padding: 1em 3em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 20;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+text-decoration: none;
+padding: 6px 15px;
+color: #fff;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 700;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+    border-radius: 20px;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .sec1
+{
+min-height: 60vh;
+}
+
+#text
+{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 4rem;
+    z-index: 9;
+
+}
+
+#text2
+{
+  position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 2rem;
+    z-index: 9;
+    top: 8rem;
+}
+
+.sec
+{
+    position: relative;
+
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 9em 15em;
+    grid-template-areas: "sec-h2 sec-img"
+                         "sec-p sec-img";
+    padding: 5em;
+    background: whitesmoke;
+
+}
+
+.sec img
+{
+    grid-area: sec-img;
+    position: absolute;
+    max-width: 17em;
+    max-height: 22em;
+    outline: 1px solid black;
+    outline-offset: 1em;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.sec h2 
+{
+    grid-area: sec-h2;
+    font-size: 2rem;
+    padding-left: 2em;
+}
+
+.sec p
+{
+    grid-area: sec-p;
+}
+
+
+.photos
+{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-color: white;
+    min-height: 75vh;
+}
+
+.photos img 
+{
+    max-height: 20em;
+    padding: 2.5rem;
+    margin: 1rem;
+    outline: 1px solid black;
+    outline-offset: 0.5px;
+}
+
+
+
+.promo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(transparent, white);
+    max-height: 80vh;
+}
+
+.promo h2
+{
+    color: #fff;
+    z-index: 9;
+    font-size: 3rem;
+    padding-left: 1rem;
+    margin: 1.5rem;
+    max-width: 10em;
+}
+
+.swiper
+{
+    max-height: 30em;
+    min-width: 30em;
+    margin: 1rem 0;
+}
+
+.swiper .swiper-pagination-bullet-active 
+{
+background: white;
+}
+
+.contact
+{
+    height: 80vh;
+
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "horario1 loc1 sm1";
+    background-color: grey;
+}
+
+.contact div
+{   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.contact h3
+{
+    position: absolute;
+    bottom: 20em;
+    margin-bottom: 2rem;
+}
+
+.horario 
+{
+grid-area: horario1;
+}
+
+
+.loc 
+{
+    grid-area: loc1;
+}
+
+.loc p
+{
+    margin-top: 5rem;
+}
+
+.loc button
+{
+    max-width: 7rem;
+    text-align: center;
+    margin: 0 2.5rem;
+    border: solid 1px white;
+    background-color: transparent;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.loc button a
+{
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Aboreto', cursive;
+}
+
+.loc button:hover
+{
+    border-radius: 2rem;
+    transition: 500ms;
+}
+
+.loc img
+{
+    position: relative;
+    max-height: 15em;
+    max-width: 15em;
+    margin-top: 1rem;
+}
+
+.sm 
+{
+    grid-area: sm1;
+}
+
+.sm div
+{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.sm img
+{
+    position: relative;
+    max-height: 3em;
+    max-width: 3em;
+    padding: 0.5rem;
+}
+
+.sm div a
+{
+    color:#fff;
+    text-decoration: none;
+}
+
+footer
+{
+    position: relative;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    max-height: 55vh;
+    background-color: black;
+}
+
+footer .col
+{
+    padding: 5em 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .col ul
+{
+    list-style: none;
+    
+}
+
+footer .col ul li
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+
+footer .col ul li a
+{
+    color: gray;
+    text-decoration: none;
+}
+
+footer .col ul li a:hover
+{
+color: #fff;
+}
+
+footer img
+{
+max-height: 8em;
+max-width: 7em;
+}
+
+footer p
+{
+    color: #fff;
+    font-size: 1rem;
+}
+
+.fb
+{
+    border-radius: 50%;
+    max-height: 2em;
+    max-width: 2em;
+    margin: 1rem;
+
+}
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+@media(max-width: 800px){
+    .sec{
+        grid-template-rows: 8em 9em;
+    }
+    .sec h2
+    {
+        padding: 0 4rem 2rem 0;
+        font-size: 1rem;
+    }
+    .sec p
+    {
+        font-size: 1rem;
+        padding: 1.5rem 2rem 0 0;
+    }
+    .sec img 
+    {
+        max-width: 10em;
+        outline-offset: 0;
+    }
+    .photos img
+    {
+        max-height: 11em;
+        max-width: 11em;
+    }
+    .photos
+    {flex-direction: column;}
+    .contact 
+    {
+        column-gap: 2rem;
+        padding: 0.5rem;
+    }
+    .contact h3
+    {
+        bottom: 20em;
+    }
+    .loc, .horario, .sm
+    {
+        max-width:7em;
+        text-align: center;
+    }
+    .loc button
+    {
+        min-width: 8em;
+    }
+    #text2
+    {
+        top: 8.5em;
+    }
+    .promo
+    {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .promo h2
+    {
+        font-size: 1.5rem;
+    }
+    .swiper
+    {
+        max-height: 20em;
+        min-width: 20em;
+        right: 1rem;
+        margin-top: 2rem;
+    }
+    footer p
+    {
+        font-size: 0.5rem;}
+    
+    footer li a
+    {
+        font-size: 0.7rem;
+    }
+    footer .logo
+    {
+       min-height: 3em; 
+    }
+    }
+
+
+.parent:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.parent:nth-child(3){
+    transition-delay: 400ms;
+}

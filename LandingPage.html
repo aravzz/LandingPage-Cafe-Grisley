@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grisley Café</title>
+    <link rel="stylesheet" href="LandingPage.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+
+<body>
+<header>
+    <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href=""></a></li>
+    </ul>
+</header>
+
+<section class="sec1">
+    <img src="photos/coffee2.0.jpeg" id="coffee" alt="">
+    <h2 id="text" class="parent hidden">Grisley</h2>
+    <h4 id="text2" class="parent hidden">Café</h4>
+    <!-- <a href="#sec">Explorar</a> -->
+</section>
+
+<div class="sec" id="sec">
+    <h2>Sobre Nosotros</h2><br><br>
+    <p> <br> Tu café favorito
+    <br><br> 100% Café Mexicano
+     <br><br> Comprometidos con el medio ambiente  
+    </p>
+
+    <img src="photos/biopic.png" alt="">
+
+</div>
+
+<div class="photos">
+    <img class="parent hidden" src="photos/coffeeopen.jpeg" alt="">
+    <img class="parent hidden" src="photos/perfect toast.jpeg" alt="">
+    <img class="parent hidden" src="photos/shopdecoration.jpeg" alt="">
+</div>
+
+
+<section class="promo" id="favoritos">
+    <div class="swiper">
+  
+  <div class="swiper-wrapper">
+    
+    <div class="swiper-slide"><img src="photos/slider1.jpeg" alt=""></div>
+    <div class="swiper-slide"><img src="photos/slider2.jpeg" alt=""></div>
+    <div class="swiper-slide"><img src="photos/slider3.png" alt=""></div>
+     <div class="swiper-slide"><img src="photos/slider4.jpeg" alt=""></div>
+    ...
+  </div>
+  <div class="swiper-pagination"></div>
+
+</div>
+
+<h2>Disfruta los favoritos de temporada.</h2>
+
+</section>
+
+<section class="contact" id="contacto">
+  <div class="horario">
+    <h3>Horario</h3>
+    <p>Lunes a Viernes 12:00 PM - 8:00PM <br>
+    <br> Sabado y Domingo 9:00 AM - 9:00PM</p>
+  </div>
+
+  <div class="loc">
+    <h3>Visitanos</h3>
+    <p>Calle St., Av. Springsfield 1200 C.P.64800</p>
+    <a href="https://www.google.com/maps/place/Buena+Semilla+%2F+Adorado+Caf%C3%A9/@25.6401376,-100.272074,15z/data=!4m6!3m5!1s0x8662bfad1308983b:0x76229a51f6c56006!8m2!3d25.6401376!4d-100.272074!16s%2Fg%2F11r_t8kcq_">  <img src="photos/loc-maps.jpg" alt="Grisley Cafe Location"></a>
+    <button><a href="">Click para ver mapa</a></button>
+</div>
+
+<div class="sm">
+  <h3>Siguenos</h3>
+        <div>
+            <img src="photos/facebook.png" alt="">
+            <a href="https://www.facebook.com">@GrisleyCafe</a>
+            
+        </div>
+        <div>
+            <img src="photos/instagram (1).png" alt="">
+            <a href="https://www.instagram.com">@GrisleyCafe</a>
+        </div>
+</div>
+
+</section>
+
+<footer>
+
+  <div class="col">
+  <ul>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="#favoritos">Favoritos de temporada</a></li>
+  </ul>
+  </div>
+  <div class="col">
+    <ul>
+      <li><a href="#sec">Sobre Nosotros</a></li>
+    </ul>
+  </div>
+  <div class="col">
+    <img class="logo" src="photos/grisley cafe logo.jpg" alt="">
+    <div class="logos">
+    <a href="https://www.facebook.com"><img class="fb" src="photos/facebook-logo2.jpg" alt=""></a>
+    <a href="https://www.instagram.com"><img class="fb" src="photos/instalogo4.jpg" alt=""></a>
+    <p>*ACLARACIÓN: Grisley Café es un negocio ficticio, el propósito de esta página web es como proyecto personal.</p>
+  </div>
+  </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>    
+
+<script>
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  autoplay: {delay: 3000,
+    disableOnInteraction: false,
+},
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination', 
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+</script>
+
+<script>
+  const observer = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+</script>
+
+
+</body>
+</html>
