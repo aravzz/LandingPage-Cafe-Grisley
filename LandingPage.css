@@ -412,7 +412,7 @@ footer p
     }
     .contact h3
     {
-        bottom: 20em;
+        bottom: 25em;
     }
     .loc, .horario, .sm
     {
@@ -422,6 +422,10 @@ footer p
     .loc button
     {
         min-width: 8em;
+    }
+    .sm a
+    {
+    font-size: 0.8rem;
     }
     #text2
     {
